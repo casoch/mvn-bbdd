@@ -26,6 +26,15 @@ public class BBDD {
         }
     }
 
+    public boolean persist(Atraccion a)
+    {
+        return false;
+    }
+
+    public boolean merge(Atraccion a)
+    {
+        return false;
+    }
 
     
     public void showError(SQLException e) {
