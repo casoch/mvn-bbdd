@@ -26,8 +26,25 @@ public class BBDD {
         }
     }
 
+    public boolean persist(Atraccion a)
+    {
+        return false;
+    }
 
-    
+    public boolean merge(Atraccion a)
+    {
+        return false;
+    }
+
+    public boolean remove(Atraccion v)
+    {
+        return false;
+    }
+
+    public boolean find(Atraccion v)
+    {
+        return false;
+    }
     public void showError(SQLException e) {
         System.out.println("Mensaje de error: " + e.getMessage());
         System.out.println("SQLState: " + e.getSQLState());
