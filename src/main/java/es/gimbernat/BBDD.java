@@ -36,7 +36,16 @@ public class BBDD {
         return false;
     }
 
+    public boolean remove(Visitante v)
+    {
+        return false;
+    }
     
+    public boolean find(Visitante v)
+    {
+        return false;
+    }
+
     public void showError(SQLException e) {
         System.out.println("Mensaje de error: " + e.getMessage());
         System.out.println("SQLState: " + e.getSQLState());
