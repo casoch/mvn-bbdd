@@ -26,6 +26,23 @@ public class BBDD {
         }
     }
     
+    public boolean persist(Visitante a)
+    {
+        return false;
+    }
+    public boolean merge(Visitante a)
+    {
+        return false;
+    }
+    public boolean remove(Visitante a)
+    {
+        return false;
+    }
+    public Visitante[] find(Visitante a)
+    {
+        return null;
+    }
+    
     public void showError(SQLException e) {
         System.out.println("Mensaje de error: " + e.getMessage());
         System.out.println("SQLState: " + e.getSQLState());
