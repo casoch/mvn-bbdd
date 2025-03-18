@@ -26,6 +26,14 @@ public class BBDD {
         }
     }
 
+
+
+    public void showError(SQLException e) {
+        System.out.println("Mensaje de error: " + e.getMessage());
+        System.out.println("SQLState: " + e.getSQLState());
+        System.out.println("VendorError: " + e.getErrorCode());
+    }
+
     public boolean persist(Atraccion a)
     {
         return false;
@@ -44,11 +52,6 @@ public class BBDD {
     public boolean find(Atraccion v)
     {
         return false;
-    }
-    public void showError(SQLException e) {
-        System.out.println("Mensaje de error: " + e.getMessage());
-        System.out.println("SQLState: " + e.getSQLState());
-        System.out.println("VendorError: " + e.getErrorCode());
     }
     
     public void unLoad()
