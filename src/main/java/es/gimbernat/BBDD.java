@@ -25,23 +25,6 @@ public class BBDD {
             return false;
         }
     }
-
-    public boolean persist(Atraccion a)
-    {
-        return false;
-    }
-    public boolean merge(Atraccion a)
-    {
-        return false;
-    }
-    public boolean remove(Atraccion a)
-    {
-        return false;
-    }
-    public Atraccion[] find(Atraccion a)
-    {
-        return null;
-    }
     
     public void showError(SQLException e) {
         System.out.println("Mensaje de error: " + e.getMessage());
