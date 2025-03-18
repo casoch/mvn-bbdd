@@ -26,6 +26,15 @@ public class BBDD {
         }
     }
 
+    public boolean persist(Visitante v)
+    {
+        return false;
+    }
+
+    public boolean merge(Visitante v)
+    {
+        return false;
+    }
 
     
     public void showError(SQLException e) {
