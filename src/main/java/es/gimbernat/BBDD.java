@@ -1,15 +1,22 @@
 package es.gimbernat;
 
+import java.awt.im.InputContext;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class BBDD {
-    private static Connection conn;
+    private  Connection conn;
 
-    public static boolean init() {
+    public  boolean init() {
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/maven_bbdd?user=root&password=linux123");
+        	Properties p = loadPropertiesFile();
+        	String strConn = (String) p.get("db.string_connection");
+        	System.out.println(strConn);
+            conn = DriverManager.getConnection(strConn);
 
             return true;
         } catch (SQLException e) {
@@ -18,9 +25,23 @@ public class BBDD {
         }
     }
 
-    public static void showError(SQLException e) {
+    public void showError(SQLException e) {
         System.out.println("Mensaje de error: " + e.getMessage());
         System.out.println("SQLState: " + e.getSQLState());
         System.out.println("VendorError: " + e.getErrorCode());
+    }
+    
+    public Properties loadPropertiesFile()
+    {
+    	Properties p = new Properties();
+    	try {
+			InputStream resourceAsStream = getClass().getClassLoader().getResourceAsStream("config.properties");
+			p.load(resourceAsStream);
+		} catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		}
+    	return p;
+    	
     }
 }
