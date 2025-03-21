@@ -45,6 +45,11 @@ public class BBDD {
     {
         return false;
     }
+    
+    public boolean persist(Visitante a)
+    {
+        return false;
+    }
     public void showError(SQLException e) {
         System.out.println("Mensaje de error: " + e.getMessage());
         System.out.println("SQLState: " + e.getSQLState());
