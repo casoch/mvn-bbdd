@@ -28,21 +28,25 @@ public class BBDD {
 
     public boolean persist(Atraccion a)
     {
+        System.out.println("persist");
         return false;
     }
 
     public boolean merge(Atraccion a)
     {
+        System.out.println("merge");
         return false;
     }
 
     public boolean remove(Atraccion v)
     {
+        System.out.println("remove");
         return false;
     }
 
     public boolean find(Atraccion v)
     {
+        System.out.println("find");
         return false;
     }
     public void showError(SQLException e) {
