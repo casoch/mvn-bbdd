@@ -17,18 +17,23 @@ public class Atraccion {
         this.capacidad = capacidad;
     }
 
-    public boolean insert()
+    public boolean persist()
     {
         return false;
     }
 
-    public boolean update()
+    public boolean merge()
     {
         return false;
     }
 
-    public boolean delete()
+    public boolean remove()
     {
         return false;
+    }
+    
+    public Atraccion[] find()
+    {
+    	return null;
     }
 }

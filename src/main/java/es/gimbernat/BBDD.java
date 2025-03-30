@@ -26,34 +26,7 @@ public class BBDD {
         }
     }
 
-    public boolean persist(Atraccion a)
-    {
-        System.out.println("persist");
-        return false;
-    }
-
-    public boolean merge(Atraccion a)
-    {
-        System.out.println("merge");
-        return false;
-    }
-
-    public boolean remove(Atraccion v)
-    {
-        System.out.println("remove");
-        return false;
-    }
-
-    public boolean find(Atraccion v)
-    {
-        System.out.println("find");
-        return false;
-    }
-    
-    public boolean persist(Visitante a)
-    {
-        return false;
-    }
+   
     public void showError(SQLException e) {
         System.out.println("Mensaje de error: " + e.getMessage());
         System.out.println("SQLState: " + e.getSQLState());
